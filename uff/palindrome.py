@@ -1,3 +1,22 @@
+# Verificação de palíndromes puras e quebradas
+
+# Uma cadeia de caracteres é chamada de palíndrome pura se a sequência de caracteres da esquerda
+# para a direita é igual à sequência de caracteres da direita para a esquerda (uma outra definição é
+# que o primeiro caractere da cadeia deve ser igual ao último caractere, o segundo caractere seja
+# igual ao penúltimo caractere, o terceiro caractere seja igual ao antepenúltimo caractere, e assim
+# por diante). Por exemplo, as cadeias de caracteres ‘MIM’, ‘AXXA’ e ‘ANANAGANANA’ são
+# palíndromes puras.
+
+# Uma outra definição de palíndrome utiliza comparações entre caracteres, considerando que os
+# caracteres são ordenados crescentemente de A até Z, ou seja, A < B < C < ... < Z. Uma cadeia de
+# caracteres é chamada de palíndrome quebrada se a sequência de resultados da comparação entre o
+# primeiro e o segundo caracteres é igual ao resultado da comparação entre o último e o penúltimo
+# caractere, e o resultado da comparação entre o segundo e o terceiro caracteres é igual ao resultado
+# da comparação entre o penúltimo e o antepenúltimo caracteres, e assim por diante. Por exemplo,
+# as cadeias ‘MIN’ e ‘ASSOCFUUS’ são palíndromes quebradas. Obviamente, toda cadeia que é
+# palíndrome pura é também palíndrome quebrada.
+
+#Função para verificação de palíndromes.
 def palind_ver(word):
 
     # separação de letras para criação de uma lista.
