@@ -20,11 +20,11 @@ def palind_ver(word):
     for i in range(n//2):
         if (
                 ((list_str[i] < list_str[i+1]) and (list_str[n-i-2] > list_str[n-i-1])) == True 
-            
+           
                 or ((list_str[i] > list_str[i+1]) and (list_str[n-i-2] < list_str[n-i-1])) == True
-            
+           
                 or ((list_str[i] == list_str[i+1]) and (list_str[n-i-2] == list_str[n-i-1])) == True
-            ):
+           ):
             p = p + 1
 
     if p == n//2:
@@ -45,3 +45,23 @@ while start == 1:
 
 # AAAEAEAEAAA
 # SUBINOONIBUS
+
+# Qual das seguintes cadeias é palíndrome quebrada:
+# (A) AAAEAEAEAAA
+# (B) AZULMARINHO
+# (C) NAOMARQUEAQUI
+# (D) PROGRAMAR
+# (E) FIM
+
+# 2. Considere as seguintes cadeias:
+# (i) BIT
+# (ii) AAAEAEAEAAA
+# (iii) SUBINOONIBUS
+# (iv) TIPOERROTUDO
+# (v) ERAREHUMANO
+# Qual das seguintes afirmações é correta?
+# (A) (i) e (ii) são palíndromes puras.
+# (B) (iv) e (v) são palíndromes quebradas
+# (C) (ii) não é palíndrome pura.
+# (D) (iii) é palíndrome pura e (iv) é palíndrome quebrada.
+# (E) (v) é palíndrome quebrada.
