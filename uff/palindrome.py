@@ -57,8 +57,6 @@ while start == 1:
     else:
         print('palavra curta demais')
 
-# AAAEAEAEAAA
-# SUBINOONIBUS
 
 # Qual das seguintes cadeias é palíndrome quebrada:
 # (A) AAAEAEAEAAA
@@ -73,6 +71,7 @@ while start == 1:
 # (iii) SUBINOONIBUS
 # (iv) TIPOERROTUDO
 # (v) ERAREHUMANO
+
 # Qual das seguintes afirmações é correta?
 # (A) (i) e (ii) são palíndromes puras.
 # (B) (iv) e (v) são palíndromes quebradas
