@@ -16,7 +16,7 @@
 # as cadeias ‘MIN’ e ‘ASSOCFUUS’ são palíndromes quebradas. Obviamente, toda cadeia que é
 # palíndrome pura é também palíndrome quebrada.
 
-#Função para verificação de palíndromes.
+# Função para verificação de palíndromes.
 def palind_ver(word):
 
     # separação de letras para criação de uma lista.
@@ -78,11 +78,11 @@ while start == 1:
 
 
 # Qual das seguintes cadeias é palíndrome quebrada:
-# (A) AAAEAEAEAAA
+# (A) TODOS
 # (B) AZULMARINHO
 # (C) NAOMARQUEAQUI
 # (D) PROGRAMAR
-# (E) FIM
+# (E) FIM 
 
 # 2. Considere as seguintes cadeias:
 # (i) BIT
