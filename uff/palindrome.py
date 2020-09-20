@@ -78,22 +78,22 @@ while start == 1:
 
 
 # Qual das seguintes cadeias é palíndrome quebrada:
-# (A) TODOS
-# (B) AZULMARINHO
-# (C) NAOMARQUEAQUI
-# (D) PROGRAMAR
-# (E) FIM 
+# (A) TODOS R: palíndrome quebrada
+# (B) AZULMARINHO R: não é uma palíndrome
+# (C) NAOMARQUEAQUI R: não é uma palíndrome
+# (D) PROGRAMAR R: não é uma palíndrome
+# (E) FIM R: não é uma palíndrome
 
 # 2. Considere as seguintes cadeias:
-# (i) BIT
-# (ii) AAAEAEAEAAA
-# (iii) SUBINOONIBUS
-# (iv) TIPOERROTUDO
-# (v) ERAREHUMANO
+# (i) BIT R: não é uma palíndrome
+# (ii) AAAEAEAEAAA R: palíndrome pura
+# (iii) SUBINOONIBUS R: palíndrome pura
+# (iv) TIPOERROTUDO R: palíndrome quebrada
+# (v) ERAREHUMANO não é uma palíndrome
 
 # Qual das seguintes afirmações é correta?
-# (A) (i) e (ii) são palíndromes puras.
-# (B) (iv) e (v) são palíndromes quebradas
-# (C) (ii) não é palíndrome pura.
-# (D) (iii) é palíndrome pura e (iv) é palíndrome quebrada.
-# (E) (v) é palíndrome quebrada
+# (A) (i) e (ii) são palíndromes puras. F
+# (B) (iv) e (v) são palíndromes quebradas F
+# (C) (ii) não é palíndrome pura. F
+# (D) (iii) é palíndrome pura e (iv) é palíndrome quebrada. V
+# (E) (v) é palíndrome quebrada F
