@@ -39,7 +39,7 @@ def palind_ver(word):
     p = 0
     # iteração para palíndrome quebrada.
     for i in range(n//2):
-        if (
+        if (     
                 (
                     (list_str[i] < list_str[i+1])
                     and (list_str[n-i-2] > list_str[n-i-1])
@@ -65,6 +65,7 @@ def palind_ver(word):
         return('não é uma palíndrome')
 
 
+# Entrada de valores para verificação de palíndromes
 start = 1
 while start == 1:
     word = str(input('Digite uma palavra, ou s para sair: ')).upper()
