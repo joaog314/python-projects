@@ -77,7 +77,6 @@ while start == 1:
     else:
         print('palavra curta demais')
 
-
 # Qual das seguintes cadeias é palíndrome quebrada:
 # (A) TODOS R: palíndrome quebrada
 # (B) AZULMARINHO R: não é uma palíndrome
