@@ -8,9 +8,8 @@ height = float(input())
 weight = float(input())
 nationality = str(input())
 
-print(f"""{name}
-{age} anos
-{"%.2f" % height} de altura
-{"%.2f" % weight} quilos
-{nationality}
-""")
+print(name)
+print(age, "anos")
+print("%.2f" % height, "de altura")
+print("%.2f" % weight,"quilos")
+print(nationality)
