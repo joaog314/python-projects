@@ -1,10 +1,10 @@
-x = int(input())
-y = int(input())
-anos = 0
 
-while x < y and x >= 2:
-    x = x*1.5
-    y = y*1.3
-    anos = anos + 1 
 
-print(anos)
+numbers_list = []
+n = int(input())
+
+while 0 <= n <= 100:
+    numbers_list.append(n)
+    n = int(input())
+
+print(numbers_list)
