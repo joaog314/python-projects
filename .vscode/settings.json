@@ -1,5 +1,5 @@
 {
     "code-runner.executorMap": {
-        "python": "anenv/bin/python",
+        "python": "/usr/bin/python",
     }
 }
