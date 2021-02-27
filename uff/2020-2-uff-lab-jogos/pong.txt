@@ -1,0 +1,4 @@
+Links de Materiais gratuitos:
+https://www.gameart2d.com/freebies.html (sprites, tilesets, etc)
+https://mixkit.co/free-sound-effects/game/ (audios)
+https://pixlr.com/br/x/#editor (editor de imagens free)
