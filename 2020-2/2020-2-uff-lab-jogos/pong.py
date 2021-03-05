@@ -1,6 +1,7 @@
 from PPlay.window import *
 from PPlay.sprite import *
 from PPlay.gameimage import *
+import random 
 
 janela = Window(800,800)
 janela.set_title("Pong")
@@ -14,7 +15,7 @@ padE = Sprite("pad.png",1)
 padD = Sprite("pad.png",1)
 
 velx = 100
-vely = 100
+vely = random.randint(-100, 100)
 velPad = 250
 
 
@@ -31,6 +32,12 @@ padD.y = janela.height/2 - padD.height/2
 pontos1 = 0
 pontos2 = 0
 
+#frame rate 
+
+t_delta = 0
+frame_rt = 0
+frames = 0
+
 while(True):
 
     if(teclado.key_pressed("UP")):
@@ -40,13 +47,21 @@ while(True):
         if (padE.y + padE.height < janela.height):
             padE.y = padE.y + velPad * janela.delta_time()
 
-    if(teclado.key_pressed("W")):
-        if (padD.y > 0):
-            padD.y = padD.y - velPad * janela.delta_time()
-    if(teclado.key_pressed("S")):
-        if (padD.y + padD.height < janela.height):
-            padD.y = padD.y + velPad * janela.delta_time()
+    # if(teclado.key_pressed("W")):
+    #     if (padD.y > 0):
+    #         padD.y = padD.y - velPad * janela.delta_time()
+    # if(teclado.key_pressed("S")):
+    #     if (padD.y + padD.height < janela.height):
+    #         padD.y = padD.y + velPad * janela.delta_time()
     
+    #ia
+    if vely > 0:
+        if (padD.y > 0):
+            padD.y = padD.y + velPad * janela.delta_time()
+    if vely < 0:
+        if (padD.y + padD.height < janela.height):
+            padD.y = padD.y - velPad * janela.delta_time()
+            
 
     #updates
     bolinha.x = bolinha.x + velx * janela.delta_time()
@@ -56,21 +71,39 @@ while(True):
         pontos1 += 1
         bolinha.x = janela.width/2 - bolinha.width/2
         bolinha.y = janela.height/2 - bolinha.height/2
+        velx = 100
+        vely = random.randint(-100, 100)
+        
     if (bolinha.x < 0): 
         pontos2 += 1
         bolinha.x = janela.width/2 - bolinha.width/2
         bolinha.y = janela.height/2 - bolinha.height/2
+        velx = - 100
+        vely = random.randint(-100, 100)
+
     if ((bolinha.y + bolinha.height) > janela.height):
         vely = vely *-1
+        
     if (bolinha.y < 0):
         vely = vely *-1
+
+
+
      #colisao da bolinha 
     if padE.collided(bolinha):
         velx = velx *-1
     if padD.collided(bolinha):
         velx = velx *-1
-       
 
+    # calculo de frames
+    t_delta += janela.delta_time()
+    frames += 1
+    if t_delta >= 1:
+        frame_rt = frames/t_delta
+        t_delta = 0
+        frames = 0
+        
+    
     #desenho
     fundo.draw()
     bolinha.draw()
@@ -78,6 +111,7 @@ while(True):
     padD.draw()
     janela.draw_text(str(pontos1), 10, 10, size=40, color=(255,255,255), font_name='Arial', bold=True, italic=False)
     janela.draw_text(str(pontos2), janela.width - 40, 10, size=40, color=(255,255,255), font_name='Arial', bold=True, italic=False)
+    janela.draw_text("FPS:"+str(int(frame_rt)), janela.width - 100, janela.height - 40, size=20, color=(255,255,255), font_name='Arial', bold=False, italic=False)
     janela.update()
 
 
