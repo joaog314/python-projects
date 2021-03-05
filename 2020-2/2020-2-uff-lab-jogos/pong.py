@@ -11,12 +11,13 @@ teclado = Window.get_keyboard()
 
 fundo = GameImage("nebula.jpg")
 bolinha = Sprite("bola.png",1)
+bolinha2 = Sprite("bola.png",1)
 padE = Sprite("pad.png",1)
 padD = Sprite("pad.png",1)
 
 velx = 100
-vely = random.randint(-100, 100)
-velPad = 250
+vely = 200 #random.randint(-200, 200)
+velPad = 150
 
 
 bolinha.x = janela.width/2 - bolinha.width/2
@@ -38,6 +39,10 @@ t_delta = 0
 frame_rt = 0
 frames = 0
 
+# collided count
+
+col_count = 0
+
 while(True):
 
     if(teclado.key_pressed("UP")):
@@ -46,23 +51,15 @@ while(True):
     if(teclado.key_pressed("DOWN")):
         if (padE.y + padE.height < janela.height):
             padE.y = padE.y + velPad * janela.delta_time()
-
-    # if(teclado.key_pressed("W")):
-    #     if (padD.y > 0):
-    #         padD.y = padD.y - velPad * janela.delta_time()
-    # if(teclado.key_pressed("S")):
-    #     if (padD.y + padD.height < janela.height):
-    #         padD.y = padD.y + velPad * janela.delta_time()
     
     #ia
-    if vely > 0:
-        if (padD.y > 0):
-            padD.y = padD.y + velPad * janela.delta_time()
     if vely < 0:
-        if (padD.y + padD.height < janela.height):
+        if (padD.y > 0):
             padD.y = padD.y - velPad * janela.delta_time()
-            
-
+    if vely > 0:
+        if (padD.y + padD.height < janela.height):
+            padD.y = padD.y + velPad * janela.delta_time()
+    
     #updates
     bolinha.x = bolinha.x + velx * janela.delta_time()
     bolinha.y = bolinha.y + vely * janela.delta_time()
@@ -91,9 +88,14 @@ while(True):
 
      #colisao da bolinha 
     if padE.collided(bolinha):
+        bolinha.x += 10     
         velx = velx *-1
+        col_count +=1
+
     if padD.collided(bolinha):
+        bolinha.x -= 10
         velx = velx *-1
+        col_count +=1
 
     # calculo de frames
     t_delta += janela.delta_time()
@@ -103,7 +105,9 @@ while(True):
         t_delta = 0
         frames = 0
         
-    
+    if col_count == 3:
+        bolinha2.draw()
+        
     #desenho
     fundo.draw()
     bolinha.draw()
