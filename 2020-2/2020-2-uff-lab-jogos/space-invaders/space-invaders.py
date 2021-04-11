@@ -73,6 +73,6 @@ while(True):
     # janela.draw_text(str(pontos1), 10, 10, size=40, color=(255,255,255), font_name='Arial', bold=True, italic=False)
     # janela.draw_text(str(pontos2), janela.width - 40, 10, size=40, color=(255,255,255), font_name='Arial', bold=True, italic=False)
     # janela.draw_text("FPS:"+str(int(frame_rt)), janela.width - 100, janela.height - 40, size=20, color=(255,255,255), font_name='Arial', bold=False, italic=False)
-    janela.update()
+        
 
 
