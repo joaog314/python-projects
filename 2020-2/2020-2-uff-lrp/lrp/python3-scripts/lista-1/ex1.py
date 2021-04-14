@@ -1,30 +1,29 @@
 
-def min_cel(n):
-    s = [0]*4
-    while n != 0:
-        if(n//50) > 0:
-            s[0] += (n//50)
-            n = n%50
-        elif(n//10) > 0:
-            s[1] += (n//10)
-            n = n%10
-        elif(n//5) > 0:
-            s[2] += (n//5)
-            n = n%5
-        elif(n//1) > 0:
-            s[3] += (n//1)
-            n = n%1
-    return print(*s)
+test_list = []
+n = None
 
-entr = -1
-test = []
+while n != 0:
+    n = int(input())
+    if n !=0:
+        test_list.append(n)
 
-while entr != 0:
-    
-    entr = int(input())
-    if  0 < entr <= 10000:
-        test.append(entr)
-
-if len(test) > 0:
-    for amount in test:
-        min_cel(amount)
+c = 1
+for value in test_list:
+    cedules = [0]*4
+    while 0 < value <= 10000: 
+        if value//50 > 0: 
+            cedules[0] += value//50
+            value=value%50
+        elif value//10 > 0: 
+            cedules[1] += value//10
+            value=value%10
+        elif value//5 > 0: 
+            cedules[2] += value//5
+            value=value%5
+        elif value//1 > 0: 
+            cedules[3] += value//1
+            value=value%1
+        
+    print('Teste '+str(c))
+    print(*cedules)
+    c+=1
