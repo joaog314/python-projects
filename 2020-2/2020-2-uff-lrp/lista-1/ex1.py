@@ -1,4 +1,3 @@
-
 test_list = []
 n = None
 
@@ -26,4 +25,5 @@ for value in test_list:
         
     print('Teste '+str(c))
     print(*cedules)
+    print('')
     c+=1
