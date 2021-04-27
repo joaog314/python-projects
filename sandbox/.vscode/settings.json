@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "python": "anenv/bin/python3"
+
+    }
+}
